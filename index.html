@@ -50,9 +50,9 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <form id="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <input type="text" placeholder="Your Name" name="name" required>
+            <input type="email" placeholder="Your Email" name="email" required>
+            <textarea placeholder="Your Message" name="message" rows="5" required></textarea>
             <button type="submit">Send Message</button>
         </form>
     </section>
@@ -61,7 +61,10 @@
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <!-- Load EmailJS -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- Link to external JS -->
+    <script src="scripts.js"></script>
 </body>
 </html>
