@@ -124,10 +124,10 @@ section{
 }
 .main-container .image{
     z-index: -1;
-    width: 50%;
+    width: 60%;
 }
 .main-container .image img{
-    width: 50%;
+    width: 60%;
 }
 .main-container .content{
     color: black;
