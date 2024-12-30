@@ -145,9 +145,10 @@ section{
     align-items: center;
 }
 
-.main-container .image{
-    z-index: -6;
-    width: 50%;
+.main-container .image {
+    width: 40%; /* Right image section */
+/*     display: flex;
+    justify-content: flex-end; /* Align image to the right */ */
 }
 
 .main-container .image img{
