@@ -146,7 +146,7 @@ section{
 }
 
 .main-container .image{
-    z-index: -2;
+    z-index: -6;
     width: 50%;
 }
 
