@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const formData = new FormData(form);
 
             // Send the form data using EmailJS
-            emailjs.sendForm("your_service_id", "your_template_id", formData) // Replace with your Service ID and Template ID
+            emailjs.sendForm("service_k4vkq2n", "template_h8gquy4", formData) // Replace with your Service ID and Template ID
                 .then(function (response) {
                     console.log("Success!", response);
                     alert("Your message has been sent successfully!");
