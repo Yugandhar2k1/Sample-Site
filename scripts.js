@@ -1,5 +1,5 @@
-// Initialize EmailJS with your user ID (Get it from your EmailJS account)
-emailjs.init("pMtlBE5PRxI5cne5m");  // Replace YOUR_USER_ID with your actual user ID from EmailJS
+// Initialize EmailJS with your user ID
+emailjs.init("pMtlBE5PRxI5cne5m");  // Replace with your actual user ID
 
 // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function (event) {
