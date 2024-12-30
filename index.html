@@ -4,7 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic CSS for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header .logo {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #hero {
+            background: #333;
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        #about, #projects, #contact {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .project-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .project {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+        }
+
+        .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,7 +117,7 @@
     </header>
 
     <section id="hero">
-        <h2>Hi, I'm <span>Yugadnhar K</span></h2>
+        <h2>Hi, I'm <span>Yugandhar K</span></h2>
         <p>I'm a passionate developer who loves creating amazing things!</p>
         <a href="#contact" class="btn">Hire Me</a>
     </section>
@@ -64,7 +162,37 @@
     <!-- Load EmailJS -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-    <!-- Link to external JS -->
-    <script src="scripts.js"></script>
+    <!-- JavaScript to handle form submission -->
+    <script>
+        // Ensure the document is fully loaded before the script runs
+        document.addEventListener("DOMContentLoaded", function () {
+            // Initialize EmailJS with your User ID
+            emailjs.init("UCi9jvExPzca_iZ4y"); // Replace with your actual EmailJS User ID
+
+            // Get the form element
+            const form = document.getElementById("contact-form");
+
+            // Check if the form exists
+            if (form) {
+                // Add event listener to the form's submit event
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent default form submission
+
+                    // Send the form data using EmailJS
+                    emailjs.sendForm("service_k4vkq2n", "template_h8gquy4", form)
+                        .then(function (response) {
+                            console.log("Success!", response);
+                            alert("Your message has been sent successfully!");
+                        })
+                        .catch(function (error) {
+                            console.log("Failed...", error);
+                            alert("Oops! Something went wrong, please try again.");
+                        });
+                });
+            } else {
+                console.error("Form element not found!");
+            }
+        });
+    </script>
 </body>
 </html>
