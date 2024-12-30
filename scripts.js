@@ -9,7 +9,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     const formData = new FormData(event.target);
 
     // Send email using EmailJS
-    emailjs.sendForm("service_sample_portfolio", "template_h8gquy4", formData)  // Replace with your Service ID and Template ID
+    emailjs.sendForm("service_k4vkq2n", "template_h8gquy4", formData)  // Replace with your Service ID and Template ID
         .then(function (response) {
             console.log("Success!", response);
             alert("Your message has been sent successfully!");
