@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize EmailJS with your user ID (replace with your actual User ID)
-    emailjs.init("your_user_id"); // Replace "your_user_id" with your actual user ID
+    emailjs.init("pMtlBE5PRxI5cne5m"); // Replace "your_user_id" with your actual user ID
 
     // Attach event listener to the form
     const form = document.getElementById("contact-form");
