@@ -145,14 +145,13 @@ section{
     align-items: center;
 }
 
-.main-container .image {
-    width: 10%; /* Right image section */
-    display: flex;
-    justify-content: flex-end; /* Align image to the right */
+.main-container .image{
+    z-index: -1;
+    width: 50%;
 }
 
 .main-container .image img{
-    width: 70%;
+    width: 100%;
 }
 
 .main-container .content{
@@ -184,7 +183,7 @@ section{
 }
 
 .typewriter span::before{
-    content: "Embedded Engineer";
+    content: "Developer";
     animation: words 15s infinite;
 }
 
@@ -200,6 +199,12 @@ section{
 @keyframes cursor {
     to{
         border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words {
+    0%, 33%{
+        content: "Embedded Engineer";
     }
 }
 
@@ -292,7 +297,7 @@ section{
     }
 
     .main-container .image{
-        width: 100%;
+        width: 80%;
         margin-bottom: 0px;
     }
 }
