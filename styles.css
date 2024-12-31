@@ -146,7 +146,7 @@ section{
 }
 
 .main-container .image {
-    width: 30%; /* Right image section */
+    width: 10%; /* Right image section */
     display: flex;
     justify-content: flex-end; /* Align image to the right */
 }
